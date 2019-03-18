@@ -39,7 +39,7 @@ repositories {
 // tag::war[]
 war {
     baseName = 'UPC'
-    version =  '0.0.1'
+    version =  'SNAPSHOT_0.0.1'
 }
 // end::jar[]
 
