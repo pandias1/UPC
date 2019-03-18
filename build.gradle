@@ -1,11 +1,57 @@
-apply plugin : 'war'
-apply plugin : 'application'
+//apply plugin : 'war'
+// apply plugin : 'application'
 
+// repositories {
+//            mavenCentral()
+//             }
+
+//  dependencies {
+//            compile "joda-time:joda-time:2.2"
+//                }
+//  mainClassName = 'JenkinsDemo.MyApp'
+
+// ####################################################
+
+// apply plugin : 'war'
+// apply plugin : 'application'
+
+// repositories {
+//            mavenCentral()
+//             }
+
+//  dependencies {
+//            compile "joda-time:joda-time:2.2"
+//               }
+//  mainClassName = 'JenkinsDemo.MyApp'
+  
+apply plugin: 'war'
+apply plugin: 'eclipse'
+apply plugin: 'application'
+
+mainClassName = 'JenkinsDemo.MyApp'
+
+// tag::repositories[]
 repositories {
-            mavenCentral()
-             }
+    mavenCentral()
+}
+// end::repositories[]
 
-  dependencies {
-            compile "joda-time:joda-time:2.2"
-                }
-  mainClassName = 'JenkinsDemo.MyApp'
+// tag::war[]
+war {
+    baseName = 'UPC'
+    version =  '0.0.1'
+}
+// end::jar[]
+
+// tag::dependencies[]
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile "joda-time:joda-time:2.2"
+    testCompile "junit:junit:4.12"
+}
+// end::dependencies[]
+
+// tag::wrapper[]
+// end::wrapper[]
