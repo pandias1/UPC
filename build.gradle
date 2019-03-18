@@ -9,3 +9,8 @@ repositories {
             compile "joda-time:joda-time:2.2"
                 }
   mainClassName = 'JenkinsDemo.MyApp'
+  
+  war {
+    baseName = 'UPC'
+    version =  '0.0.1'
+}
